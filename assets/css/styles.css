@@ -30,11 +30,11 @@ body {
     font-family: var(--font-sans);
     background-color: var(--bg-primary);
     color: var(--text-main);
-    min-height: 100vh;
+    text-wrap: balance;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1.5;
+    line-height: 1.25;
 }
 
 #app {
@@ -106,10 +106,13 @@ button {
     border: none;
     border-radius: 0.5rem;
     transition: all var(--transition-fast);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .difficulty-selector h2 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--text-muted);
     margin-bottom: 1rem;
     text-align: center;
@@ -122,10 +125,8 @@ button {
 }
 
 .difficulty-button {
-    padding: 0.75rem 1rem;
     background-color: var(--bg-primary);
     color: var(--text-main);
-    font-weight: 600;
     border: 2px solid transparent;
 }
 
@@ -133,68 +134,26 @@ button {
     transform: translateY(-2px);
 }
 
-#easy-button:hover { border-color: var(--color-easy); color: var(--color-easy); }
-#medium-button:hover { border-color: var(--color-medium); color: var(--color-medium); }
-#hard-button:hover { border-color: var(--color-hard); color: var(--color-hard); }
-
-/* Cabecera del juego activo */
-.game-header {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--bg-primary);
-    padding: 1rem;
-    border-radius: 0.75rem;
-    margin-bottom: 2rem;
+#easy-button:hover {
+    border-color: var(--color-easy);
+    color: var(--color-easy);
 }
 
-.game-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#medium-button:hover {
+    border-color: var(--color-medium);
+    color: var(--color-medium);
 }
 
-.game-stat .label {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
+#hard-button:hover {
+    border-color: var(--color-hard);
+    color: var(--color-hard);
 }
 
-.game-stat span:last-child {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-/* Puntuación de resultados */
-.results-summary {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.results-label {
-    color: var(--text-muted);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-}
-
-.final-score {
-    font-size: 4rem;
-    font-weight: 900;
-    color: var(--color-success);
-}
-
-.results-actions {
+.actions-buttons {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
     justify-content: center;
-}
-
-.results-actions button {
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
 }
 
 #play-again-button {
@@ -215,6 +174,54 @@ button {
 #cancel-game-button:hover, #back-menu-button:hover {
     background-color: var(--bg-surface-hover);
     color: var(--text-main);
+}
+
+/* Cabecera del juego activo */
+.game-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bg-primary);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.game-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-stat .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+}
+
+.game-stat span:last-child {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Puntuación de resultados */
+.results-summary {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.results-label {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+}
+
+.final-score {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--color-success);
 }
 
 /* ==========================================================================
