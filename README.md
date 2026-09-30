@@ -71,20 +71,24 @@ memory/
 │
 ├── assets/
 │   │
-│   ├── css/                # Estilos propios de la aplicación
+│   ├── css/                    # Estilos propios de la aplicación
 │   │   └── styles.css
 │   │
-│   ├── icon/               # Archivos de favicon, generados en https://favicon.io/
+│   ├── icon/                   # Archivos de favicon, generados en https://favicon.io/
 │   │   └── ...
 │   │
-│   └── js/                 # Archivos de lógica, separando las responsabilidades
+│   └── js/                     # Archivos de lógica, separando las responsabilidades
 │       ├── app.js
 │       ├── cards.js
 │       ├── scoreboard.js
 │       ├── state.js
 │       └── ui.js
 │
-└── index.html              # Punto de entrada de la aplicación
+├── LICENSE.md                  # Archivo de licencia MIT en formato Markdown
+│
+├── README.md                   # Archivo "Léeme" del proyecto en Markdown
+│
+└── index.html                  # Punto de entrada de la aplicación
 ```
 
 
@@ -92,7 +96,7 @@ memory/
 
 El flujo de la aplicación se repite cíclicamente y consiste en el siguiente:
 
-```bash
+```text
     ┌───────────────┐
     │ Elegir nivel  │
 ┌───┤ de dificultad ├─── ◄────────┐
